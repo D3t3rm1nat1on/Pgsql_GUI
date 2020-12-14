@@ -6,4 +6,26 @@
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Npgsql" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="UserNameWindow.xaml">
+        <Generator></Generator>
+      </Page>
+      <Page Update="LoginWindow.xaml">
+        <Generator></Generator>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="UserNameWindow.xaml.cs">
+        <DependentUpon>UserNameWindow.xaml</DependentUpon>
+      </Compile>
+      <Compile Update="LoginWindow.xaml.cs">
+        <DependentUpon>LoginWindow.xaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>

@@ -6,7 +6,54 @@
         xmlns:local="clr-namespace:Pgsql_GUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        <Grid>
+                <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" MinWidth="150"/>
+                        <ColumnDefinition Width="3*" MinWidth="450"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" x:Name="RegistrationButton" Click="RegistrationButton_OnClick">RegistrationButton</Button>
+                <Button Grid.Row="1" Grid.Column="0" x:Name="RolesButton"        Click="RolesButton_OnClick"       >RolesButton</Button>
+                <Button Grid.Row="2" Grid.Column="0" x:Name="TasksButton"        Click="TasksButton_OnClick"       >TasksButton</Button>
+                <Button Grid.Row="3" Grid.Column="0" x:Name="RequestsButton"     Click="RequestsButton_OnClick"    >RequestsButton</Button>
+                <Button Grid.Row="4" Grid.Column="0" x:Name="ClientSearchButton" Click="ClientSearchButton_OnClick">Поиск клиентов</Button>
+                <Button Grid.Row="5" Grid.Column="0" x:Name="ReportButton"       Click="ReportButton_OnClick"      >Отчетность по сотрудникам</Button>
+                <Button Grid.Row="6" Grid.Column="0" x:Name="UserLoginButton"    Click="UserLoginButton_OnClick"   >Залогиниться</Button>
+                <Grid Grid.Row="0" Grid.RowSpan="6" Grid.Column="1" x:Name="ContentGrid">
+                        <DataGrid AutoGenerateColumns="False" Name="DataGridReport" CanUserAddRows="True"
+                                  ScrollViewer.CanContentScroll="True" 
+                                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Auto" >
+                        </DataGrid>
+                        <DataGrid AutoGenerateColumns="False" Name="DataGridTest1" CanUserAddRows="True"
+                                  ScrollViewer.CanContentScroll="True" 
+                                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Auto" >
+                        </DataGrid>
+                </Grid>
+                
+                <Grid Grid.Row="6" Grid.Column="1" x:Name="UserInfoGrid">
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" >Имя пользователя:</Label>
+                        <Label Grid.Row="1" Grid.Column="0" >Группа пользователя:</Label>
+                        <Label Grid.Row="0" Grid.Column="1" x:Name="UserNameLabel"></Label>
+                        <Label Grid.Row="1" Grid.Column="1" x:Name="UserGroupLabel"></Label>
+                </Grid>
+        </Grid>
 </Window>
+
